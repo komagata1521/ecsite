@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<!-- Strutsの詳細設定 -->
+<struts>
+	<constant name="struts.devMode" value="true"/>
+	<package name="com.internousdev.ecsite.action" extends="struts-default">
+
+<!--  	GoHomeActionの処理-->
+		<action name="GoHomeAction" class="com.internousdev.ecsite.action.GoHomeAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+
+<!-- 	HomeAcitonの処理 -->
+		<action name="HomeAction" class="com.internousdev.ecsite.action.HomeAction" method="execute">
+			<result name="login">login.jsp</result>
+			<result name="success">buyItem.jsp</result>
+		</action>
+
+<!-- 	LoginActionの処理 -->
+		<action name="LoginAction" class="com.internousdev.ecsite.action.LoginAction" method="execute">
+			<result name="success">buyItem.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+<!-- 	UserCreateActionの処理 -->
+		<action name="UserCreateAction" class="com.internousdev.ecsite.action.UserCreateAction" method="execute">
+			<result name="success">userCreate.jsp</result>
+		</action>
+
+<!-- 	UserCreateConfirmActionの処理 -->
+		<action name="UserCreateConfirmAction" class="com.internousdev.ecsite.action.UserCreateConfirmAction"
+		method="execute" >
+			<result name="success">userCreateConfirm.jsp</result>
+			<result name="error">userCreate.jsp</result>
+		</action>
+
+<!-- 	UserCreateCompleteActionの処理-->
+		<action name="UserCreateCompleteAction" class="com.internousdev.ecsite.action.UserCreateCompleteAction"
+		method="execute">
+			<result name="success">userCreateComplete.jsp</result>
+		</action>
+<!-- 	BuyItemActionの処理 -->
+		<action name="BuyItemAction" class="com.internousdev.ecsite.action.BuyItemAction" method="execute">
+			<result name="success">buyItemConfirm.jsp</result>
+		</action>
+<!-- 	BuyItemConfirmActionの処理 -->
+		<action name="BuyItemConfirmAction" class="com.internousdev.ecsite.action.BuyItemConfirmAction"
+		method="execute">
+			<result name="success">buyItemComplete.jsp</result>
+		</action>
+<!-- 	MyPageActionの処理 -->
+		<action name="MyPageAction" class="com.internousdev.ecsite.action.MyPageAction" method="execute">
+			<result name="success">myPage.jsp</result>
+			<result name="error">home.jsp</result>
+		</action>
+<!-- 	LogoutActionの処理 -->
+		<action name="LogoutAction" class="com.internousdev.ecsite.action.LogoutAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+<!-- 	UnsubscribeActionの処理 -->
+		<action name="UnsubscribeAction" class="com.internousdev.ecsite.action.UnsubscribeAction" method="execute">
+			<result name="success">unsubscribeConfirm.jsp</result>
+		</action>
+<!-- 	UnsubscribeConfirmActionの処理 -->
+		<action name="UnsubscribeConfirmAction" class="com.internousdev.ecsite.action.UnsubscribeConfirmAction"
+		 method="execute">
+			<result name="success">unsubscribeComplete.jsp</result>
+			<result name="error">unsubscribeError.jsp</result>
+		</action>
+<!-- 	AdminActionの処理 -->
+		<action name="AdminAction" class="com.internousdev.ecsite.action.AdminAction" method="execute">
+			<result name="success">admin.jsp</result>
+		</action>
+<!-- 	ItemCreateActionの処理 -->
+		<action name="ItemCreateAction" class="com.internousdev.ecsite.action.ItemCreateAction" method="execute">
+			<result name="success">itemCreate.jsp</result>
+		</action>
+	</package>
+</struts>
