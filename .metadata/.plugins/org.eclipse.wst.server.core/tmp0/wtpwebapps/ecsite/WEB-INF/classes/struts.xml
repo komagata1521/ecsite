@@ -78,5 +78,16 @@
 		<action name="ItemCreateAction" class="com.internousdev.ecsite.action.ItemCreateAction" method="execute">
 			<result name="success">itemCreate.jsp</result>
 		</action>
+<!-- 	ItemCreateConfirmActionの処理 -->
+		<action name="ItemCreateConfirmAction" class="com.internousdev.ecsite.action.ItemCreateConfirmAction"
+		method="execute">
+			<result name="success">itemCreateConfirm.jsp</result>
+			<result name="error">itemCreate.jsp</result>
+		</action>
+<!-- 	ItemCreateCompleteActionの処理 -->
+		<action name="ItemCreateCompleteAction" class="com.internousdev.ecsite.action.ItemCreateCompleteAction"
+		method="execute">
+			<result name="success">itemCreateComplete.jsp</result>
+		</action>
 	</package>
 </struts>

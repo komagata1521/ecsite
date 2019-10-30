@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="session.get(&quot;itemName&quot;)"/>\r\n<expression enabled\="true" text\="session.get(&quot;itemPrice&quot;)"/>\r\n<expression enabled\="true" text\="session.get(itemStock)"/>\r\n</watchExpressions>\r\n
